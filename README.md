@@ -2,14 +2,21 @@
 
 This README provides step-by-step instructions for starting Kafka locally and testing it on a Windows machine.
 
-## Prerequisites
+## Prerequisites 
 
+#### Manually Set Up 
 - Download kafka - https://dlcdn.apache.org/kafka/3.5.0/kafka_2.13-3.5.0.tgz
 - Using 7-Zip extract the contents of kafka_2.13-3.5.0.tgz
 - Then Using 7-Zip again extract the contents of kafka_2.13-3.5.0.tar
 - In kafka_2.13-3.5.0/config/server.properties update log.dirs=/kafka-logs
 - In kafka_2.13-3.5.0/config/zookeeper.properties update dataDir=/zookeeper
 - Open a terminal and navigate to the extracted files
+
+
+#### Automated Set Up 
+    ```
+    .\setup-kafka.ps1
+    ```
 
 ## How to Start Locally 
 
@@ -22,7 +29,6 @@ This README provides step-by-step instructions for starting Kafka locally and te
     ```
     .\bin\windows\kafka-server-start.bat .\config\server.properties
     ```
-
 ## How to Test
 
 1. Create a topic named "test":
